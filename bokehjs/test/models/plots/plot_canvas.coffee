@@ -215,11 +215,6 @@ describe "PlotCanvasView render", ->
     plot_canvas.attach_document(doc)
     @plot_canvas_view = new plot_canvas.default_view({ 'model': plot_canvas })
 
-  it "should call own update_constraints method", sinon.test () ->
-    spy = this.spy(@plot_canvas_view, 'update_constraints')
-    @plot_canvas_view.render()
-    expect(spy.calledOnce).to.be.true
-
 describe "PlotCanvasView resize", ->
   dom_left = 12
   dom_top = 13
