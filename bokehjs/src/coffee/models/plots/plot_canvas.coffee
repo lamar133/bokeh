@@ -519,9 +519,6 @@ export class PlotCanvasView extends BokehView
         @update_dataranges()
         break
 
-    # AK: seems weird to me that this is here, but get solver errors if I remove it
-    @update_constraints()
-
     # TODO (bev) OK this sucks, but the event from the solver update doesn't
     # reach the frame in time (sometimes) so force an update here for now
     @model.frame._update_mappers()
